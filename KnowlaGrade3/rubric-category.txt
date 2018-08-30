@@ -1,0 +1,10 @@
+1 
+xxxxxxxxxxxx
+xxxxxxx.END-FEEDBACK
+4 
+yyy
+yyyyyyyyyyyyyyyyyyyyyyy
+yyyyy.END-FEEDBACK
+3 
+zzyyyyyyyyyyyyyyzz
+zzzzzzzzz.END-FEEDBACK

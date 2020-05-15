@@ -16,7 +16,7 @@ public class HeadingFragment extends Fragment {
 		super(aString);
 	}
 	
-	public void add(Fragment aFragment) {
+	public void addFragment(Fragment aFragment) {
 		theSubFragments.add(aFragment);
 	}
 	

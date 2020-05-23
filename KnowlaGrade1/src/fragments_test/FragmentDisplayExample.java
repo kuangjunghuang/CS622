@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import fragments.Fragment;
 import fragments.HeadingFragment;
 import fragments.NonHeadingFragment;
+import fragments.NullFragmentException;
 
 class FragmentDisplayExample {
 
@@ -43,6 +44,7 @@ class FragmentDisplayExample {
 		// Post1 (theFragments) AND Post2 (Various):
 
 		HeadingFragment myExpensesHeading = new HeadingFragment("My Expenses Heading");
+
 		theFragments.add(myExpensesHeading); // for Post1
 
 		NonHeadingFragment estateTaxes = new NonHeadingFragment("Estate taxes");
@@ -70,9 +72,15 @@ class FragmentDisplayExample {
 		myExpensesHeading.addFragment(housingHeading);
 		myExpensesHeading.addFragment(food);
 
+		// try to add a null fragment to force an exception
+		myExpensesHeading.addFragment(null);
 		// Post3 (Display):
-		System.out.println("========= Should display 8 items ==========");
-		myExpensesHeading.displayAll();
+		try {
+			System.out.println("========= Should display 8 items ==========");
+			myExpensesHeading.displayAll();
+		} catch (NullFragmentException e) {
+			System.out.println(e.getMessage());
+		}
 		// Post4 (Counts)
 		displayTypeCount();
 	}
